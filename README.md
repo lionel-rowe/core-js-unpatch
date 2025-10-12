@@ -1,13 +1,13 @@
-# core-js unpatch
+# core-js unpatch [![JSR](https://jsr.io/badges/@li/core-js-unpatch)](https://jsr.io/@li/core-js-unpatch)
 
-`core-js` monkey patches `Function.prototype.toString` to make its polyfills appear to be native. This library reverts this behavior for improved debugging and introspection.
+[`core-js`](https://github.com/zloirock/core-js/) monkey patches `Function.prototype.toString` to make its polyfills appear to be native. This library reverts this behavior for improved debugging and introspection.
 
 Recommended usage is to import _before_ all `core-js` imports:
 
 ```js
 import '@li/core-js-unpatch'
-import 'npm:core-js/actual/array/from.js'
-import 'npm:core-js/full/string/code-points.js'
+import 'core-js/actual/array/from.js'
+import 'core-js/full/string/code-points.js'
 
 // `Array.from` already available as built-in, so native version is used:
 // Logs "function from() { [native code] }"
