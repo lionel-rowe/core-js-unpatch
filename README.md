@@ -10,7 +10,7 @@ import 'npm:core-js/actual/array/from.js'
 import 'npm:core-js/full/string/code-points.js'
 
 // `Array.from` already available as built-in, so native version is used:
-// Logs "function fromAsync() { [native code] }"
+// Logs "function from() { [native code] }"
 console.log(Array.from.toString())
 
 // `String.prototype.codePoints` not yet available as built-in, so polyfill is used:
